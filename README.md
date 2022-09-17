@@ -1,0 +1,1 @@
+Practised cleaning up the clean.js file in Javascript

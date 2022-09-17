@@ -69,7 +69,13 @@ const logBigExpenses = function (bigLimit) {
 // Impure because of console.log()
 const logBigExpenses = function (state, bigLimit) { 
   const bigExpenses = state.filter(entry => entry.value <= -bigLimit).map(entry => entry.description.slice(-2)).join(' / ')
-  // .reduce((str, cur) => `${str} / ${cur.description.slice(-2)}`, '');
+
+  // ${str}, refers to what str is so far (previous val of str)
+  // const bigExpenses = state.filter(entry => entry.value <= -bigLimit).reduce((str, cur) => `${str} / ${cur.description.slice(-2)}`, ''); //val of str constatly gets updated
+
+  //  '' / 📱
+  // '' / 📱 / 💻
+
   console.log(bigExpenses);
 }
 
